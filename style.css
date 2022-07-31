@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Odibee Sans', cursive;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  height: 1080px;
+  text-align: center;
+  /* background-image: url("https://images.unsplash.com/photo-1557142046-c704a3adf364?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"); */
+
+}
+
+a {
+  color: #fff;
+}
+h1 {
+  line-height: 1.4;
+}
+.btn {
+  /* border: 0; */
+  background-color: rgb(50, 157, 136);
+  color: #0f0f0f;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius:50%;
+  border-width: 4px;
+}
+.btn:hover {
+  /* opacity: ; */
+  color: rgb(6, 6, 6);
+  background-color: rgb(7, 191, 247);
+}
+.btn:focus {
+  outline: 0;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  
+}
+.screen.up {
+  margin-top: -100vh;
+}
+.insects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.insects-list li {
+  margin: 10px;
+}
+.choose-insect-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.choose-insect-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.choose-insect-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  
+}
+.choose-insect-btn:hover{
+    background-color: rgb(109, 109, 109);
+    
+}
+.game-container{
+    position: relative;
+}
+.time, .score{
+    position: absolute;
+    top: 20px;
+}
+.time{
+    left: 20px;
+}
+.score{
+    right: 20px;
+}
+.message{
+    line-height: 1.7;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 20;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4 ease-in;
+} 
+.message.visible{
+    transform: translate(-50%, 150%);
+    opacity: 1;
+}
+.message.hide{
+  transform: translate(-150%, 150%);
+  opacity: 1;
+}
+.insect{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+    top: 400px;
+    left: 500px;
+  
+}
+.insect.caught{
+    transform: translate(-50%,-50%) scale(0);
+}
+.insect img{
+    width: 100px;
+    height: 100px;
+}
