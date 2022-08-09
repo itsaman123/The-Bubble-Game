@@ -1,8 +1,18 @@
 # The-Bubble-Game
 
+
+
+https://itsaman123.github.io/The-Bubble-Game/
+
+
+
 #This a Game Built by using HTML, CSS and JavaScript.
 
+
+
 It has three Interfaces:
+
+
 
 1. The first one is the button. On clicking the button will be render the second page
 
